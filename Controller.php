@@ -1,17 +1,20 @@
 <?php
 declare(strict_types=1);
 
-class YahtzeeController {
+class YahtzeeController
+{
     
     private Yahtzee $model;
     private YahtzeeView $view;
     
-    public function __construct(Yahtzee $model, YahtzeeView $view){
+    public function __construct(Yahtzee $model, YahtzeeView $view)
+    {
         $this->model = $model;
         $this->view = $view;
     }
     
-    public function get_model() : Yahtzee {
+    public function get_model() : Yahtzee
+    {
         /*
         get_model() : YahtzeeModel
         > This method should return the model set by the constructor.
@@ -19,7 +22,8 @@ class YahtzeeController {
         return $this->model;       
     }
     
-    public function get_view() : YahtzeeView {
+    public function get_view() : YahtzeeView
+    {
         /*
         get_view() : YahtzeeView
         > This method should return the view set by the constructor.
@@ -27,7 +31,8 @@ class YahtzeeController {
         return $this->view;
     }
     
-    public function get_possible_categories() : array {
+    public function get_possible_categories() : array
+    {
         /*
         get_possible_categories() : array
         Returns an associative array.
@@ -40,7 +45,8 @@ class YahtzeeController {
         return $rv;
     }
     
-    public function process_score_input(string $line) : int {
+    public function process_score_input(string $line) : int
+    {
         /*
         process_score_input(string: $line) : int
         Returns an integer that denotes the status of the user input for when
@@ -58,7 +64,8 @@ class YahtzeeController {
         return 0;
     }
     
-    public function process_keep_input(string $line) : int {
+    public function process_keep_input(string $line) : int
+    {
         /*
         process_keep_input(string $line) : int
         Processes the input from the user when determining which dice to keep.
@@ -74,7 +81,8 @@ class YahtzeeController {
         
     }
     
-    public function handle_roll() : int {
+    public function handle_roll() : int
+    {
         /* 
         handle_roll() : int
         This method rolls the dice, up to three times, and gathers input from
@@ -106,7 +114,8 @@ class YahtzeeController {
         return 0;
     }
     
-    public function main_loop() : int {
+    public function main_loop() : int
+    {
         /*
         main_loop() : int
         Runs the main loop of the controller.
